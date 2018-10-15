@@ -12,6 +12,27 @@ Nathan Gold
   * b) How would you then view a list of all the files contained in your current directory? Using the file structure from Question 1A, how would you view the files in the Madonna directory if you were currently working in the Cher directory?
   * c) What commands would you use to perform the following operations from inside ~/Music/Madonna: Move Believe.mp3 to ~/Music/Cher, remove Imagine.mp3 from ~/Music/Madonna, and copy Bedtime Story from ~/Music/Madonna to ~/Music/Bjork?
 
+* Question 2
+Given the following, where dogNotes is a matrix and catNotes is a dataframe:
+```
+>dogNotes
+             Mass    Color    
+Bird         "45lbs" "Brown"  
+Jackson      "55lbs" "Black"  
+Harley       "75lbs" "Yellow" 
+Liberty Bell "40lbs" "Mottled"
+
+> catNotes
+             Mass            Color
+Agatha       10.0           Calico
+Empires       8.0            Black
+Ruckus        9.0 Gray/White Tabby
+Big Kitty    11.5           Orange
+Little Kitty 10.0            Black
+```
+  * a) How would you access Harley's mass, using row and column names? What about Big Kitty's color?
+  * b) There are at least three ways to return the values in a dataframe's column as a vector. Give two ways to return a vector of cat colors, and one way to return a dataframe of cat names and colors. 
+  * c) For each set of data, how would you return <NATHAN FINISH HERE, WANT TO ASK ABOUT dogNames[,'Mass]
 
 ##### Answer Key
 * Answer 1A
@@ -41,7 +62,7 @@ To remove a directory from an arbitrary location, use its full or absolute path,
 rmdir ~/Music/Nickelback
 ```
 
-*Answer 1B
+* Answer 1B
   * a)
 ```
 touch Vogue.mp3 Cherish.mp3 Believe.mp3 "Bedtime Story.mp3"  #You could also contain the filenames inside {}, separated by commas, as with mkdir in question 1A
