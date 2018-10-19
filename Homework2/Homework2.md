@@ -28,11 +28,22 @@ Agatha       10.0           Calico
 Empires       8.0            Black
 Ruckus        9.0 Gray/White Tabby
 Big Kitty    11.5           Orange
-Little Kitty 10.0            Black
+Little Kitty 10.0            Gray
 ```
   * a) How would you access Harley's mass, using row and column names? What about Big Kitty's color?
   * b) There are at least three ways to return the values in a dataframe's column as a vector. Give two ways to return a vector of cat colors, and one way to return a dataframe of cat names and colors. 
-  * c) For each set of data, how would you return <NATHAN FINISH HERE, WANT TO ASK ABOUT dogNames[,'Mass]
+
+* Question 3
+Given the following file structure:
+```
+/usr/
+    bwehrle/
+           data/
+           kites/
+           scripts/
+                  helloWorld.txt
+```
+What chmod commands would you use to make helloWorld.txt readable by anyone, without exposing other files or directories to being read? Hint: In order to view a file, all of its parent directories must be executable, and the file itself must be readable.
 
 ##### Answer Key
 * Answer 1A
@@ -80,4 +91,28 @@ ls ~/Music/Madonna
 mv Believe.mp3 ~/Music/Cher
 rm Imagine.mp3
 cp "Bedtime Story.mp3" ~/Music/Bjork  #be sure to use quotes if there are spaces in a filename, but try not to create filenames with spaces
+```
+
+* Answer 2
+  * a) 
+```
+dogNotes['Harley', 'Mass'] #return the value from the matrix dogNotes at the intersection of row 'Harley' and column 'Mass'
+catNotes['Big Kitty', 'Color'] #return the value from the dataframe catNotes at the intersection of row 'Big Kitty' and column 'Color'
+```
+  * b)
+Three ways to return a vector of cat colors:
+```
+catNotes[,'Color'] 
+catNotes$Color
+catNoters[['Color']]
+```
+And one way to return a subsetted dataframe of row names and corresponding colors:
+```
+catNotes['Color']
+```
+
+* Answer 3
+```
+chmod o+r /usr/bwehrle/scripts/helloWorld.txt #give "others" group read permissions on the helloWorld file
+<STILL NEED TO CHANGE PERMS ON DIRECTORIES
 ```
